@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>GameSite - Update Player</title>
+</head>
+<body>
+<h1>Update Player</h1>
+<form th:action="@{'/player/update/' + ${player.id}}" method="post">
+  <input type="hidden" th:field="${id}"/>
+  Player nickname: <input type="text" th:field="${nickname}" required><br><br>
+  Player real name: <input type="text" th:field="${realName}" required><br><br>
+  Player national: <input type="text" th:field="${national}" required><br><br>
+  Player age: <input type="number" th:field="${age}" required><br><br>
+  Player team: <input type="text" th:field="${team}" required><br><br>
+  <input type="submit" value="Update player"/>
+</form>
+</body>
+</html>
